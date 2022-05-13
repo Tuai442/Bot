@@ -27,16 +27,25 @@ __Beschikbare kleuren:__
 - <span style="color:Purple">*Paars*. Vrij
 - <span style="color:yellow">*Geel*. Vrij
 
+---
+
 ## Onderdelen
 
 
-#### User Interface
+### User Interface
 
 - [Simulatie Pagina](#Simulatie Pagina)
 - [Account Pagina](#Account Pagina)
 - [Instellingen Pagina](#Instelling Pagina)
 - [Home Pagina](#Home Pagina)
 
+---
+
+### Home Pagina
+
+#### Werking
+
+---
 
 ### Simulatie Pagina
 
@@ -55,3 +64,14 @@ simulatie en stuurt die terug naar de front-end.
 >
 > We kunnen belangerijke datasetten opslaan in een gezamelijke [map](Data).
 
+---
+
+### Account Pagina
+
+#### Werking
+
+---
+
+### Instellingen Pagina
+
+#### Werking
