@@ -1,0 +1,17 @@
+.graph-container{
+    margin: auto;
+    width: 90%;
+    padding: 10px;
+    padding: 5vw;
+    text-align: center;
+}
+
+.menu{
+    padding: 20px;
+    float: right;
+}
+
+#graph{
+    padding: 5vw;
+}
+

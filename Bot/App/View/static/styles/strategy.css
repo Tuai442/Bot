@@ -1,0 +1,122 @@
+
+.simulatie{
+    margin-left: 70px;
+}
+
+.startegy{
+    padding: 50px;
+}
+
+p, span, input{
+    padding: 10px;
+    margin-left: 20px;
+}
+
+select{
+    margin-left: 30px;
+}
+
+h1, h2, h3, h4{
+    padding: 20px;
+}
+
+ul{
+    padding: 20px;
+    margin-left: 40px;
+}
+
+
+
+.drop-zone {
+    margin-left: 30px;
+    max-width: 200px;
+    height: 200px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    color: #cccccc;
+    border: 4px dashed rgb(180, 116, 43);
+    border-radius: 10px;
+  }
+  
+.drop-zone--over {
+border-style: solid;
+}
+
+.drop-zone__input {
+display: None;
+}
+
+.hide{
+  display: none;
+}
+
+.drop-zone__thumb {
+width: 100%;
+height: 100%;
+border-radius: 10px;
+overflow: hidden;
+background-color: #cccccc;
+background-size: cover;
+position: relative;
+}
+
+.drop-zone__thumb::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.75);
+    font-size: 14px;
+    text-align: center;
+  }
+
+.configure-graph{
+ display: inline-block;
+}
+
+.strategy{
+}
+
+.graph-controls{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row ;
+    margin-left: 30px;
+}
+.btn-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.table-group{
+ margin-left: 50px;
+}
+#fileName{
+    margin-top: 10px;
+}
+
+.btn {
+    margin: 10px;
+    height: 30px;
+    width: 120px;
+    text-align: center;
+    line-height: 3px;
+    border-radius: 10px;
+    background-color: lightgray;
+}
+
+#slider{
+    width: 250px;
+    background: #565656;
+    height: 7px;
+}

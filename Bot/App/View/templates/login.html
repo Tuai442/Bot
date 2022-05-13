@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' type="text/css" href="{{ url_for('auth.static', filename='styles/login.css')}}">
+
+    <title>Login</title>
+</head>
+<body>
+
+    <div class="center">
+        <div>
+            <h1>Login</h1>
+            {% if error %}
+                <div class='error'> De gebruikesnaam of het wachtwoord is fout !</div>
+            {% endif %}
+            <form method="POST" action="/login">
+                {{ form.hidden_tag() }}
+                {{ form.email.label(class="label") }}
+                <br>
+                {{ form.email(class="input-veld") }}
+                <br>
+                {{ form.password.label(class="label") }}
+                <br>
+                {{ form.password(class="input-veld") }}
+                <br>
+                {{ form.submit(class="submit") }}
+
+                <a href="/registration" class="regestratie">Registreren</a>
+
+                <div class="check-label">
+                    {{ form.remember }}
+                    {{ form.remember.label }}
+                </div>
+            </form>
+            
+            
+        </div>
+    </div>
+</body>
+</html>

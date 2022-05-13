@@ -1,0 +1,44 @@
+
+.table-wrapper {
+  display:block;
+}
+
+.table {
+  border-collapse: collapse;
+  border-radius: 5px;
+  box-shadow: 0 0 4px rgba(40, 39, 39, 0.25);
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.table-scroll {
+  height:200px;
+  overflow:auto;  
+  margin-top:10px;
+  background-color: #282b36;
+  border-radius: 5px;
+}
+
+th {
+  background: rgb(180, 116, 43);
+  color: #ffffff;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 10px 20px;
+}
+
+.current-row{
+  background-color: rgb(137, 137, 68) !important;
+}
+
+
+tr:nth-child(even) {
+  background: #343232;
+}
+
+

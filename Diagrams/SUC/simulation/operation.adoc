@@ -1,0 +1,60 @@
+
+|===
+|Operation |SetDataset(dataset: list): bool
+
+|Cross reference
+|Geef een dataset in waarmeer er gesimuleerd kan worden (.csv)
+
+|Preconditions
+|/
+
+|Postcondition
+| 1. Er is een attribut dataset waar de data in opgeslagen is. +
+
+|===
+
+
+|===
+|Operation |ConfigSimulatie()
+
+|Cross reference
+|Geef parameters in om een simulatie te configureren.
+
+|Preconditions
+|Dataset moet ingegven zijn.
+
+|Postcondition
+| 1. Een object simulatie werd gecreerd. +
+  2. Het attribut isConigured wordt op true ingesteld.
+
+|===
+
+|===
+|Parameters Configuration |Type
+
+|Symbol     |string
+|Interval   |string
+|..         |..
+
+
+|===
+
+
+
+|===
+|Operation |StartSimulation()
+
+|Cross reference
+|De simulatie wordt gestart.
+
+|PreconditionsC
+|Er moet een configuratie ingesteld zijn.
+
+|Postcondition
+| 1. Een object simulatie werd gecreërd.
+
+|===
+
+
+
+

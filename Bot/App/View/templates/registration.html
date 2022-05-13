@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registreer</title>
+    <link rel='stylesheet' type="text/css" href="{{ url_for('auth.static', filename='styles/registreren.css')}}">
+</head>
+<body>
+    <div class="center">
+        <h1>Registreren</h1>
+        <form method="POST" action="/registration" class='grid'>
+
+
+            {{ form.hidden_tag() }}
+            {{ form.username.label(class="label")}}
+            {{ form.username(class="input-veld")}}
+            <br>
+
+            {{ form.email.label(class="label")}}
+            {{ form.email(class="input-veld")}}
+            <br>
+
+            {{ form.password.label(class="label")}}
+            {{ form.password(class="input-veld")}}
+
+            <br>
+            {{ form.confirm_password.label(class="label") }}
+            {{ form.confirm_password(class="input-veld")}}
+
+            <br>
+            {{ form.submit(class="submit") }}
+
+        </form>
+       
+    </div>
+
+</body>
+</html>

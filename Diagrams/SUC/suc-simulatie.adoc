@@ -1,0 +1,34 @@
+== SUC - Simulatie uitvoeren
+De gebruiker wilt een strategy of pattern simuleren.
+
+== Actors
+*gebruiker*
+
+== SUC - Simulatie uitvoeren
+. Een *gebruiker* wilt via da web interface een simulatie doen om een strategie te testen.
+. De *gebruiker* geeft de dataset in waarmee hij de simulatie of strategie wilt testen.
+. Het Systeem controleerd of de input goed is.  link:domeinregels.adoc[DR_CP]
+. De *gebruiker* configureerd de simulatie of pattern. link:domeinregels.adoc[CS]
+. De *gebruiker* start de simulatie.
+. Het systeem toont een grafiek met nodig info, het zal de grafiek blijven updaten en
+van nodige info voorzien zolang de simulatie loopt.
+. De gebruiker volgt de simulatie en bekijkt de rezultaten.
+. De suc eindigd.
+
+
+== Alternatief A - De ingegeven dataset is niet goed
+[start=3]
+. Het systeem geeft een bericht aan de gebruiker dat de data set niet goed is.
+. Systeem doet stap opnieuw.
+
+
+== Alternatief B - Er zijn foute parameters ingegeven.
+[start=4]
+. Het systeem geeft een bericht aan de gebruiker dat er parameters verkeerd zijn ingegeven
+bij het configureren van de simulatie of pattern.
+. Systeem doet stap opnieuw.
+
+
+== Alternatief C - De gebruiker veranderd grafiek tijdens het simuleren.
+_Tijdens het simuleren kan de gebruiker de snelheid en de data op de grafiek beheren._
+[start=7]

@@ -1,0 +1,58 @@
+body{
+    font-family: "Arial", Serif;
+    background-color: rgb(27, 27, 27);
+    color: rgb(180, 116, 43);
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+}
+
+h1{
+    font-size:xx-large;
+    margin-bottom: 50px;
+    
+
+}
+
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid;
+    border-color:  rgb(180, 116, 43);
+    padding: 50px;
+}
+
+
+.label{
+    color: white;
+   
+}
+
+.input-veld{
+    border-radius: 7px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+
+
+
+.login{
+    color: rgb(172, 147, 102);
+    text-decoration: none;
+    
+}
+
+.submit{
+    border-radius: 5px;
+    background-color: rgb(71, 70, 67);
+}
+
+.submit:hover{
+    background-color: rgb(235, 222, 199);
+}
+

@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+{% block content %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.min.js"></script>
+<script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+<link rel='stylesheet' type="text/css" href="{{ url_for('index.static', filename='styles/drop_zone.css')}}">
+<link rel='stylesheet' type="text/css" href="{{ url_for('index.static', filename='styles/table.css')}}">
+<link rel='stylesheet' type="text/css" href="{{ url_for('index.static', filename='styles/strategy.css')}}">
+<link rel='stylesheet' type="text/css" href="{{ url_for('index.static', filename='styles/setup_side.css')}}">
+<link rel='stylesheet' type="text/css" href="{{ url_for('index.static', filename='styles/strategy-config.css')}}">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src='https://cdn.plot.ly/plotly-2.11.1.min.js'></script>
+
+<script src="{{ url_for('index.static', filename='js/drag_and_drop.js')}}"></script>
+<!-- <script src="{{ url_for('index.static', filename='js/graph.js')}}"></script> -->
+<script src="{{ url_for('index.static', filename='js/simulatie.js')}}"></script>
+
+
+<div>
+    <div>
+        <nav class="setup-nav">
+            <a href="#init-data"><i class="far fa-user"></i>TEST DATA</a>
+            <a href="#config"><i class="fas fa-briefcase">CONFIGURATIE</i></a>
+            <a href="#"><i class="fas fa-briefcase">/</i></a>
+
+        </nav>
+
+        <div class= 'container'>
+            <section id='init-data'>
+                <h1>Data instellen</h1>
+                <h3>Instellen van strategie</h3>
+                <p>
+                    Voor een strategie te kunnen testen hebben we test data nodig geef dit hier in,
+                    let op dit moet in een .csv formaat zijn.
+                </p>
+                <div class="graph-container">
+                    <div>
+                        <div class="drop-zone">
+                            <span class="drop-zone__prompt">Sleep hier het bestand of klik voor uploaden</span>
+                            <input type="file" name="myFile" class="drop-zone__input">
+                        </div>
+                        <input type="file" id="csvFileInput" style="padding-bottom: 15px">
+                    </div>
+                    <div>
+                        <select name="" id="symbol-select">
+                            {% for symbol in symbols %}
+                            <option value="{{symbol}}">{{symbol}}</option>
+                            {% endfor %}
+                        </select>
+                        <select name="" id="interval-select">
+                            {% for interval in intervals %}
+                            <option value="{{interval}}">{{interval}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                   <!-- <div id="table-wrapper-1" class="table-wrapper-1">
+                        <div id="table-scroll-1" class="table-scroll-1">
+                            <table id="table-1" class="table-1" >
+
+                                <tr>ik</tr>
+                            </table>
+
+                        </div>
+                    </div>-->
+                </div>
+            </section>
+
+            <section id= 'config'>
+                <h1>Configuratie's</h1>
+                <div>
+                    <p>Kies een type van strategië</p>
+                    <select name="" id="strategy-select">
+                        <option value="fibonacci">Fibonacci</option>
+                        <option value="rsi">RSI</option>
+                    </select>
+                    <!--CONFIG-->
+                    <form  method="POST" class="setup-show" id="setup">
+
+                    </form>
+                    <input type="button" id="submit-btn" value="Maak strategie">
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+<div class="simulatie">
+
+        <h1>Simulatie</h1>
+
+        <h3>Grafiek</h3>
+        <div id="title-bar" class="title-bar"></div>
+        <div id="graph" class="graph-wrapper">
+            <div class="graph-controls">
+                <div class="btn-group">
+                    <div id="btn-group">
+                        <label>Wallet</label>
+                        <label id="wallet" >0.00</label>
+
+                        <input type="button" class="btn" id="start" value="Start simulatie">
+                        <input type="button" id="pauze" class="btn" value="pauze">
+                    </div>
+                    <input id="slider" type="range" min="1" max="100" value="50"></input>
+                    <p id="fileName"></p>
+                </div>
+
+                <div class="table-group">
+                    <div id="table-wrapper-2" class="table-wrapper">
+                        <div id="table-scroll-2" class="table-scroll">
+                            <table id="table-2" class="table">
+
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+</div>
+
+
+
+{% endblock content %}

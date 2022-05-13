@@ -1,0 +1,11 @@
+== Domeinregels
+
+== CD - Controle dataset
+De ingegeven dataset moet een .csv extensie hebben, ook zouden we kunnen verwachten
+dat de dataset een header heeft maar het zou mooi zijn dat dit niet moet en het programma hier om kan mee gaan.
+
+
+== CS - Configureer simulatie.
+Er zijn verschillende soorten simulatie' en patternen die kunnen getest worden, voor elk van hen zijn er elk andere parameters
+die appart ingesteld kunnen worden.
+( patterns maken een onderdeel uit van de startegie. )
